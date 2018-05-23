@@ -52,8 +52,8 @@ public class HasteDinamicaUpBottomMemorization {
         scan = new Scanner(file);
 
         while (scan.hasNextLine()) {//Separação de Linhas e Colunas
-            String[] campos = scan.nextLine().split("\\s+");
-            vetorAux.add(Integer.parseInt(campos[1]));
+            String[] campos = scan.nextLine().split(" ");
+            vetorAux.add(Integer.parseInt(campos[0]));
         }
 
         int[] vetor = new int[vetorAux.size()];//Vetor Principal
@@ -61,10 +61,10 @@ public class HasteDinamicaUpBottomMemorization {
         for (int i = 0; i < vetorAux.size(); i++) {//Passando Variaveis do vetor auxiliar para vetor principal
             vetor[i] = vetorAux.get(i);
         }
-
+        Cronometro.start();
         int num = MemorizedCutRod(vetorAux.size(), vetor);//Executando algoritimo
         System.out.println("Melhor valor possivel: " + num);//Mostrando o resultado final
-
+        Cronometro.stop();
     }
 
 }

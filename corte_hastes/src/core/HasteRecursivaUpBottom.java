@@ -2,12 +2,19 @@ package core;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.Scanner;
 
+/**
+ * implementação recursiva de cima para baixo do problema de corte de hastes
+ * @author vanison
+ *
+ */
 public class HasteRecursivaUpBottom {//
 
-    public static int cutRod(int n, int[] preco) {// implementação recursiva de cima para baixo do problema de corte de hastes
+    public static int cutRod(int n, int[] preco) {
         if (n <= 0) {
             return 0;
         }
@@ -34,7 +41,7 @@ public class HasteRecursivaUpBottom {//
         scan = new Scanner(file);
 
         while (scan.hasNextLine()) {//Separação de Linhas e Colunas
-            String[] campos = scan.nextLine().split("\\s+");
+            String[] campos = scan.nextLine().split(" ");
             vetorAux.add(Integer.parseInt(campos[0]));
         }
 
@@ -44,9 +51,10 @@ public class HasteRecursivaUpBottom {//
             vetor[i] = vetorAux.get(i);
         }
 
+        Cronometro.start();
         int num = cutRod(vetorAux.size(), vetor);//Executando algoritimo
         System.out.println("Melhor valor possivel: " + num);//Mostrando o resultado final
-
+        Cronometro.stop();
     }
 
 }

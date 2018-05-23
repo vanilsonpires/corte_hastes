@@ -41,8 +41,8 @@ public class HasteDinamicaBottomUp {
         scan = new Scanner(file);
 
         while (scan.hasNextLine()) {//Separação de Linhas e Colunas
-            String[] campos = scan.nextLine().split("\\s+");
-            vetorAux.add(Integer.parseInt(campos[1]));
+            String[] campos = scan.nextLine().split(" ");
+            vetorAux.add(Integer.parseInt(campos[0]));
         }
 
         int[] vetor = new int[vetorAux.size()];//Vetor Principal
