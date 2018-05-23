@@ -5,7 +5,7 @@ import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class HasteDinamicaUpBottomMemorization {
+public class HasteDinamicaCimaBaixoMemorization {
 
     public static int MemorizedCutRod(int n, int[] preco) {
         int[] r = new int[n + 1];

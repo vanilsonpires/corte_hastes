@@ -5,7 +5,7 @@ import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class AtividadeGulosoInterativo {
+public class GulosoInterativo {
 
 	public static void activitySelection(int vetorI[], int vetorF[], int vetorId[]) {
 		int i, j;

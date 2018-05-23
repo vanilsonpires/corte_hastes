@@ -7,12 +7,12 @@ import java.util.Scanner;
 public class Main {
 	public static void main(String[] args) throws FileNotFoundException, IOException {
 
-		try {
-			Scanner sc = new Scanner(System.in);
+		while (true) {
 
-			int op = 0;
+			try {
+				Scanner sc = new Scanner(System.in);
 
-			while (true) {
+				int op = 0;
 
 				System.out.println("Entre com umas das opções abaixo\n"
 						+ "1 - Corte de haste / implementação recursiva de cima para baixo\n"
@@ -24,16 +24,16 @@ public class Main {
 
 				switch (op) {
 				case 1:
-					HasteRecursivaUpBottom.executar();
+					HasteRecursivaCimaBaixo.executar();
 					break;
 				case 2:
-					HasteDinamicaUpBottomMemorization.executar();
+					HasteDinamicaCimaBaixoMemorization.executar();
 					break;
 				case 3:
-					HasteDinamicaBottomUp.executar();
+					HasteDinamicaBaixoCima.executar();
 					break;
 				case 4:
-					AtividadeGulosoInterativo.executar();
+					GulosoInterativo.executar();
 					break;
 				case 5:
 					System.exit(0);
@@ -41,9 +41,9 @@ public class Main {
 				default:
 					System.out.println("Este não é uma opção valida!");
 				}
+			} catch (Exception e) {
+				e.printStackTrace();
 			}
-		} catch (Exception e) {
-			e.printStackTrace();
 		}
 
 	}

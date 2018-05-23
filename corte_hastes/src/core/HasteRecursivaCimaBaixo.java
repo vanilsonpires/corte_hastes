@@ -12,7 +12,7 @@ import java.util.Scanner;
  * @author vanison
  *
  */
-public class HasteRecursivaUpBottom {//
+public class HasteRecursivaCimaBaixo {//
 
     public static int cutRod(int n, int[] preco) {
         if (n <= 0) {

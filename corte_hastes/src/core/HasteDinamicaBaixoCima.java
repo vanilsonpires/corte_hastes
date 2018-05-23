@@ -10,7 +10,7 @@ import java.util.Scanner;
  * @author vanilson
  *
  */
-public class HasteDinamicaBottomUp {
+public class HasteDinamicaBaixoCima {
 
     public static int bottomUpCutRod(int price[], int n) {
         int val[] = new int[n + 1];
