@@ -6,6 +6,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
 import java.util.List;
 
 public class ReadFile {
@@ -48,14 +49,11 @@ public class ReadFile {
 					
 					//Inicia a leitura do aquivo
 					String s = null;
-					int qtd = 0;
+					dados = new ArrayList<String[]>();
 					
-					while((s = br.readLine()) !=null) {
-						qtd++;						
-						if(qtd!=1){
-							// Separa cada dado da linha em um vetor	
-							dados.add(s.split(SEPARATOR)); //Adiciona os arquivos na lista..
-						}
+					while( (s = br.readLine()) !=null) {
+						// Separa cada dado da linha em um vetor	
+						dados.add(s.split(SEPARATOR)); //Adiciona os arquivos na lista..
 					};
 					return true;
 				}else {
