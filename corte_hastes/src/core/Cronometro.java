@@ -11,11 +11,11 @@ public class Cronometro {
 	public static void stop(){
 		long time = System.currentTimeMillis()-start;
 		System.out.print("Tempo de execução: ");
-		if(time>1000){
+		if(((double)time)>1000.0){
 			if(time/1000 > 60){
-				System.out.println(((time/1000)/60) +"minutos");
+				System.out.println((((double)time/1000.0)/60.0) +"minutos");
 			}else{
-				System.out.println(time/1000+" segundos");
+				System.out.println(((double)time)/1000.0+" segundos");
 			}
 		}else{
 			System.out.println(time+" milessegundos");

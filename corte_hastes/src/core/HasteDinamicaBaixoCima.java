@@ -51,8 +51,10 @@ public class HasteDinamicaBaixoCima {
             vetor[i] = vetorAux.get(i);
         }
 
+        Cronometro.start();
         int num = bottomUpCutRod(vetor, vetorAux.size());//Executando algoritimo
         System.out.println("Melhor valor possivel: " + num);//Mostrando o resultado final
+        Cronometro.stop();
 
     }
 
